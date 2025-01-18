@@ -1,0 +1,26 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<main>
+  <h1>Agregar Nuevo Producto</h1>
+  <form action="/products/create" method="POST" enctype="multipart/form-data">
+    <label for="name">Nombre del producto</label>
+    <input type="text" name="name" required>
+
+    <label for="description">Descripción</label>
+    <textarea name="description" required></textarea>
+
+    <label for="image">Imagen</label>
+    <input type="file" name="image" accept="image/*">
+
+    <label for="category">Categoría</label>
+    <input type="text" name="category" required>
+
+    <label for="price">Precio</label>
+    <input type="number" name="price" required>
+
+    <button type="submit">Agregar Producto</button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>
